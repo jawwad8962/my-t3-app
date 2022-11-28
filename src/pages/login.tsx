@@ -9,7 +9,7 @@ function LoginPage(){
     const router = useRouter()
     const [success, setSuccess] = useState(false)
     const {handleSubmit, register} = useForm<CreateUserInput>()
-    const {mutate, error} = trpc.users.requestOtp.useMutation({
+    const {mutate, error} = trpc.users.requestLogin.useMutation({
         onSuccess:() => {
             setSuccess(true)
             router.push('/')
