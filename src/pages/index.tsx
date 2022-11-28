@@ -63,8 +63,8 @@ const StudentModal: FC<StudentModalProps> = ({ setModalOpen, setStudents }) => {
             onClick={async (event) => {
               addStudent({
                 name: name,
-                grade: parent,
-                parentName: grade
+                grade: grade,
+                parentName: parent
               })
               setModalOpen(false)
             }}
